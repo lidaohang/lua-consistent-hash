@@ -77,7 +77,7 @@ local function chash_init()
 	local step = math.floor(0xFFFFFFFF / MMC_CONSISTENT_BUCKETS)
 
 	BUCKETS = {}
-	for i=1, MMC_CONSISTENT_BUCKETS do
+	for i=0, MMC_CONSISTENT_BUCKETS do
 		table.insert(BUCKETS, i, chash_find(math.floor(step * (i - 1))))
 	end
 
